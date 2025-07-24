@@ -15,6 +15,7 @@ function DashboardHome({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
     <div class="dashboard-home">
       <div class="welcome-section">
+        
         <h2>مرحباً بك في لوحة التحكم</h2>
         <p>يمكنك إدارة بطاقات الدعوة من هنا</p>
       </div>
