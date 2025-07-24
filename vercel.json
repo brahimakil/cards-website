@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/card/(.*)",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/dashboard/(.*)",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(login|register)",
+      "dest": "/index.html"
+    }
+  ]
+} 
