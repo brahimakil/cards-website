@@ -13,7 +13,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      onwarn(warning, warn) {
+      onwarn() {
         // Suppress all warnings
         return;
       }
