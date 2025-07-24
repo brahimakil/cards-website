@@ -5,27 +5,20 @@ import preact from '@preact/preset-vite'
 export default defineConfig({
   plugins: [preact()],
   esbuild: {
-    logOverride: { 
-      'this-is-undefined-in-esm': 'silent',
-      'empty-import-meta': 'silent'
-    },
-    legalComments: 'none'
+    target: 'es2020',
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
   },
   build: {
+    target: 'es2020',
     rollupOptions: {
       onwarn() {
-        // Suppress all warnings
         return;
       }
-    },
-    minify: 'esbuild'
+    }
   },
   server: {
     hmr: {
-      overlay: false // Disable error overlay
+      overlay: false
     }
-  },
-  optimizeDeps: {
-    exclude: ['eslint']
   }
 })

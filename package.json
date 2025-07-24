@@ -5,10 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "lint": "echo 'Linting disabled'",
-    "lint:fix": "echo 'Linting disabled'"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^10.14.1",
@@ -19,9 +17,5 @@
     "@preact/preset-vite": "^2.10.2",
     "typescript": "~5.8.3",
     "vite": "^6.0.0"
-  },
-  "eslintConfig": {
-    "extends": [],
-    "rules": {}
   }
 }
