@@ -128,7 +128,12 @@ export default function EditableCard({ cardData, onFieldUpdate, isEditing, cardW
           </div>
         )}
 
-        <div class="card-content-professional">
+        <div class="card-content-professional"
+          style={{
+            '--section-background': colors.titleBackground || '#ffffff',
+            '--section-border': colors.titleBorder || '#d4af37'
+          }}
+        >
           
           {/* Logo Section */}
           <div class="logo-section-professional floating-element">
@@ -232,7 +237,13 @@ export default function EditableCard({ cardData, onFieldUpdate, isEditing, cardW
           </div>
 
           {/* Description Message Section */}
-          <div class="description-section">
+          <div 
+            class="description-section"
+            style={{
+              backgroundColor: colors.titleBackground || '#ffffff',
+              borderColor: colors.titleBorder || '#d4af37'
+            }}
+          >
             <div 
               class="editable-field description-text animate-fade-in"
               contentEditable={isEditing}
@@ -244,7 +255,13 @@ export default function EditableCard({ cardData, onFieldUpdate, isEditing, cardW
           </div>
 
           {/* Names Section */}
-          <div class="names-section-professional scale-in">
+          <div 
+            class="names-section-professional scale-in"
+            style={{
+              backgroundColor: colors.titleBackground || '#ffffff',
+              borderColor: colors.titleBorder || '#d4af37'
+            }}
+          >
             <div class="names-container">
               <div class="name-block-professional">
                 <div class="name-title">العريس</div>
@@ -296,7 +313,10 @@ export default function EditableCard({ cardData, onFieldUpdate, isEditing, cardW
             style={{
               '--date-bg-start': colors.dateBgStart || '#d4af37',
               '--date-bg-end': colors.dateBgEnd || '#f4e4bc',
-              '--date-border': colors.dateBorder || 'rgba(255,255,255,0.3)'
+              '--date-border': colors.dateBorder || 'rgba(255,255,255,0.3)',
+              '--wedding-date-color': colors.weddingDateColor || '#ffffff',
+              '--countdown-numbers': colors.countdownNumbers || '#ffffff',
+              '--countdown-labels': colors.countdownLabels || '#ffffff'
             } as any}
           >
             <div class="main-date">
@@ -336,7 +356,13 @@ export default function EditableCard({ cardData, onFieldUpdate, isEditing, cardW
           </div>
 
           {/* Event Section */}
-          <div class="event-section slide-in-right">
+          <div 
+            class="event-section slide-in-right"
+            style={{
+              backgroundColor: colors.eventBackground || '#ffffff',
+              borderColor: colors.eventBorder || '#d4af37'
+            }}
+          >
             <div class="section-title">الإحتفال</div>
             
             <div class="event-details">
@@ -397,7 +423,13 @@ export default function EditableCard({ cardData, onFieldUpdate, isEditing, cardW
           </div>
 
           {/* Gifts Section */}
-          <div class="gifts-section bounce-in">
+          <div 
+            class="gifts-section bounce-in"
+            style={{
+              backgroundColor: colors.giftsBackground || '#ffffff',
+              borderColor: colors.giftsBorder || '#d4af37'
+            }}
+          >
             <div class="section-title">الهدايا</div>
             <div class="gifts-message">
               <p>حضوركم أجمل وأثمن هدية.</p>

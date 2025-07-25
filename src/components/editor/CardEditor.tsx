@@ -51,6 +51,16 @@ export default function CardEditor({ editingCardId, onNavigate }: CardEditorProp
         omtBorder: '#d4af37',
         wishMoneyBackground: '#ffffff',
         wishMoneyBorder: '#d4af37',
+        eventBackground: '#ffffff', // Add event section colors
+        eventBorder: '#d4af37',
+        giftsBackground: '#ffffff', // Add gifts section colors
+        giftsBorder: '#d4af37',
+        dateBgStart: '#d4af37',
+        dateBgEnd: '#f4e4bc',
+        dateBorder: 'rgba(255,255,255,0.3)',
+        weddingDateColor: '#ffffff',
+        countdownNumbers: '#ffffff',
+        countdownLabels: '#ffffff',
         accentColor: '#d4af37',
         secondaryAccent: '#f4e4bc'
       }
@@ -68,6 +78,16 @@ export default function CardEditor({ editingCardId, onNavigate }: CardEditorProp
         omtBorder: '#7c3aed',
         wishMoneyBackground: '#f3f4f6',
         wishMoneyBorder: '#7c3aed',
+        eventBackground: '#f3f4f6', // Add event section colors
+        eventBorder: '#7c3aed',
+        giftsBackground: '#f3f4f6', // Add gifts section colors
+        giftsBorder: '#7c3aed',
+        dateBgStart: '#7c3aed',
+        dateBgEnd: '#a78bfa',
+        dateBorder: 'rgba(255,255,255,0.3)',
+        weddingDateColor: '#ffffff',
+        countdownNumbers: '#ffffff',
+        countdownLabels: '#ffffff',
         accentColor: '#7c3aed',
         secondaryAccent: '#a78bfa'
       }
@@ -85,6 +105,16 @@ export default function CardEditor({ editingCardId, onNavigate }: CardEditorProp
         omtBorder: '#e11d48',
         wishMoneyBackground: '#f9fafb',
         wishMoneyBorder: '#e11d48',
+        eventBackground: '#f9fafb', // Add event section colors
+        eventBorder: '#e11d48',
+        giftsBackground: '#f9fafb', // Add gifts section colors
+        giftsBorder: '#e11d48',
+        dateBgStart: '#e11d48',
+        dateBgEnd: '#fb7185',
+        dateBorder: 'rgba(255,255,255,0.3)',
+        weddingDateColor: '#ffffff',
+        countdownNumbers: '#ffffff',
+        countdownLabels: '#ffffff',
         accentColor: '#e11d48',
         secondaryAccent: '#fb7185'
       }
@@ -102,6 +132,16 @@ export default function CardEditor({ editingCardId, onNavigate }: CardEditorProp
         omtBorder: '#059669',
         wishMoneyBackground: '#f9fafb',
         wishMoneyBorder: '#059669',
+        eventBackground: '#f9fafb', // Add event section colors
+        eventBorder: '#059669',
+        giftsBackground: '#f9fafb', // Add gifts section colors
+        giftsBorder: '#059669',
+        dateBgStart: '#059669',
+        dateBgEnd: '#34d399',
+        dateBorder: 'rgba(255,255,255,0.3)',
+        weddingDateColor: '#ffffff',
+        countdownNumbers: '#ffffff',
+        countdownLabels: '#ffffff',
         accentColor: '#059669',
         secondaryAccent: '#34d399'
       }
@@ -119,6 +159,16 @@ export default function CardEditor({ editingCardId, onNavigate }: CardEditorProp
         omtBorder: '#2563eb',
         wishMoneyBackground: '#f8fafc',
         wishMoneyBorder: '#2563eb',
+        eventBackground: '#f8fafc', // Add event section colors
+        eventBorder: '#2563eb',
+        giftsBackground: '#f8fafc', // Add gifts section colors
+        giftsBorder: '#2563eb',
+        dateBgStart: '#2563eb',
+        dateBgEnd: '#60a5fa',
+        dateBorder: 'rgba(255,255,255,0.3)',
+        weddingDateColor: '#ffffff',
+        countdownNumbers: '#ffffff',
+        countdownLabels: '#ffffff',
         accentColor: '#2563eb',
         secondaryAccent: '#60a5fa'
       }
@@ -756,6 +806,85 @@ export default function CardEditor({ editingCardId, onNavigate }: CardEditorProp
                             type="color"
                             value={cardData.fields.colors?.dateBorder || '#ffffff'}
                             onChange={(e) => handleColorChange('dateBorder', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                        
+                        <div class="color-control">
+                          <label>لون نص التاريخ الرئيسي</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.weddingDateColor || '#ffffff'}
+                            onChange={(e) => handleColorChange('weddingDateColor', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                        
+                        {/* Countdown Numbers Color Controls */}
+                        <div class="color-control">
+                          <label>لون أرقام العد التنازلي</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.countdownNumbers || '#ffffff'}
+                            onChange={(e) => handleColorChange('countdownNumbers', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                        
+                        <div class="color-control">
+                          <label>لون تسميات العد التنازلي</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.countdownLabels || '#ffffff'}
+                            onChange={(e) => handleColorChange('countdownLabels', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Event Section Color Controls */}
+                    <div class="color-section">
+                      <h4>تخصيص ألوان قسم الإحتفال</h4>
+                      <div class="color-controls">
+                        <div class="color-control">
+                          <label>خلفية قسم الإحتفال</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.eventBackground || '#ffffff'}
+                            onChange={(e) => handleColorChange('eventBackground', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                        
+                        <div class="color-control">
+                          <label>حدود قسم الإحتفال</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.eventBorder || '#d4af37'}
+                            onChange={(e) => handleColorChange('eventBorder', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                        
+                        {/* Gifts Section Color Controls */}
+                        <div class="color-control">
+                          <label>خلفية قسم الهدايا</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.giftsBackground || '#ffffff'}
+                            onChange={(e) => handleColorChange('giftsBackground', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
+                          />
+                        </div>
+                        
+                        <div class="color-control">
+                          <label>حدود قسم الهدايا</label>
+                          <input
+                            type="color"
+                            value={cardData.fields.colors?.giftsBorder || '#d4af37'}
+                            onChange={(e) => handleColorChange('giftsBorder', (e.target as HTMLInputElement).value)}
+                            class="color-picker"
                           />
                         </div>
                       </div>

@@ -103,8 +103,11 @@ export default function CardViewer({ cardId }: CardViewerProps) {
     );
   }
 
+  // Get the custom width from card data, default to 400px if not set
+  const cardWidth = cardData.width || 400;
+
   return (
-    <div class="card-viewer">
+    <div class="card-viewer-clean">
       {/* Music Control */}
       {cardData.fields?.musicUrl && (
         <div class="music-control-floating">
@@ -127,18 +130,27 @@ export default function CardViewer({ cardId }: CardViewerProps) {
         </div>
       )}
 
-      {/* Card Content */}
-      <div class="card-viewer-content">
+      {/* Card Content with Custom Width */}
+      <div 
+        class="card-viewer-container-clean"
+        style={{ 
+          maxWidth: `${cardWidth}px`,
+          width: `${cardWidth}px`,
+          margin: '0 auto',
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px',
+          boxSizing: 'border-box'
+        }}
+      >
         <EditableCard 
           cardData={cardData}
           onFieldUpdate={() => {}} // Read-only mode
           isEditing={false}
+          cardWidth={cardWidth}
         />
-      </div>
-
-      {/* Footer with branding */}
-      <div class="card-viewer-footer">
-        <p>تم إنشاء هذه البطاقة بواسطة نظام إدارة البطاقات</p>
       </div>
     </div>
   );
